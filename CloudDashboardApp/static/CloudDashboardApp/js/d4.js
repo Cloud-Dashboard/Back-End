@@ -92,7 +92,8 @@ var svg = d3.select(".svgP"),
         .attr("class", "context")
         .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")");
 
-    d3.csv("https://raw..githubusercontentcom/Cloud-Dashboard/Data-CSV/main/tes.csv", type, function(error, data) {
+        
+    d3.csv("https://raw.githubusercontent.com/Cloud-Dashboard/Data-CSV/main/tes.csv", type, function(error, data) {
         if (error) throw error;
 
         x.domain(d3.extent(data, function(d) {
