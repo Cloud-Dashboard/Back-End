@@ -2,15 +2,15 @@
                 top: 10,
                 right: 10,
                 bottom: 100,
-                left: 40
+                left: 120
             },
             margin2 = {
                 top: 430,
                 right: 10,
                 bottom: 20,
-                left: 40
+                left: 100
             },
-            width = 500 - margin.left - margin.right,
+            width = 900 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom,
             height2 = 500 - margin2.top - margin2.bottom;
 
@@ -55,7 +55,7 @@
                 return y2(d.temperature);
             });
 
-        var svg = d3.select("body").append("svg")
+        var svg = d3.select(".svga").append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom);
 

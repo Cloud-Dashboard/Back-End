@@ -1337,6 +1337,12 @@ header .form-inline {
     padding: 1.25em;
     position: relative;
     width: 100%; }
+    .card .card-body .svg {
+      float: left;
+      position: relative;
+      height: 500px;
+      width: 100%; }
+  
   .card h4 {
     font-size: 1.1rem; }
   .card .user-header .media img {
