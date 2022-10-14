@@ -24,17 +24,6 @@ def lista(request):
 
     
 # Create your views here.
-def about(request):
-    return render(request, "CloudDashboardApp/about.html")
-def home(request):
-    return render(request, "CloudDashboardApp/home.html")
-def dashboard(request):
-    return render(request, "CloudDashboardApp/dashboard.html")  
-def data(request):
-    return render(request, "CloudDashboardApp/data.html")
-
-def upload(request):
-    return render(request,"upload.html")
 
 def data0ChartsC(request):
     return render(request, "CloudDashboardApp/charts-chartjs.html")
