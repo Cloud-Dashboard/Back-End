@@ -1,0 +1,14 @@
+{% extends "CloudDashboardApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<form name="formulario" method="post" action="{% url 'Characterization' %}">
+    {% csrf_token %}
+    <!-- Datos del formulario -->
+        {{a}}: <input type="text" name="nose" />
+    <!-- Botón de envío de formulario -->
+    <input type="submit" value="Enviar Caracterizacion... creo" />
+  </form>
+{% endblock %}
