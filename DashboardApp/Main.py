@@ -12,7 +12,7 @@ class main():
         #url = ".\\Datasets\\Dengue.csv"
         #url = ".\\Datasets\\Influenza.csv"
         #
-        url = ".\\Datasets\\Sarampion.csv"
+        url = "https://raw.githubusercontent.com/Cloud-Dashboard/Data-CSV/main/Sarampion.csv"
         grado = 60
         alfa = 0.51360099729011
         beta = -0.176262299002633

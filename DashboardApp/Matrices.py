@@ -1,6 +1,6 @@
 from DashboardApp import operaciones
 import math
-from DashboardApp import Ortogonal as ort
+from DashboardApp.Ortogonal import Ortogonal as ort
 
 
 class Matrices:
