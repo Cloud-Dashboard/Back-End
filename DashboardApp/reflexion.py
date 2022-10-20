@@ -10,20 +10,27 @@ def ejecucionX(datos, grado, alpha, beta):
     # dMatrizA = cMatriz.getdMatrizA()
     A = cMatriz.getA()
     dMatrizR = cMatriz.mEvaluRecu(datos, A)
+
     dErr = cMatriz.mError(datos, dMatrizR, grado)
-
-    print(f'\nCoeficientes: {len(A) - 1}')
+    
+    # print(f'\nCoeficientes: {len(A) - 1}')
     for i in range(len(A)):
-        print(A[i])
+        #print(A[i])
+        Ai=A[i]
 
-    print('\nSalida:')
+    # print('\nSalida:')
     for j in range(len(dMatrizR)):
         for k in range(len(dMatrizR[0])):
-            print(f'{dMatrizR[j][k]}', end=' ')
+            # print(f'{dMatrizR[j][k]}', end=' ')
+            dMR=dMatrizR[j][k]
+
+
             if k == 1:
                 salidas.append(dMatrizR[j][1])
-        print()
-    print(dErr)
+        # print()
+    # print(dErr)
+    return dMatrizR
+
 
 
 def getSalidas():

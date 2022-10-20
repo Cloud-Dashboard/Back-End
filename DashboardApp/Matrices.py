@@ -3,6 +3,12 @@ import math
 from DashboardApp.Ortogonal import Ortogonal as ort
 
 
+
+
+from django.shortcuts import render
+
+
+
 class Matrices:
 
     def __init__(self, dDatos, iGrado, alpha, beta):
@@ -102,13 +108,15 @@ class Matrices:
 
     def mEvaluRecu(self, datos, dMatrizA):
         dMatrizRec = self.MatrizBidimensional(len(datos), 2)
+        
         for i in range(len(datos)):
             dMatrizRec[i][0] = datos[i][1]
             suma = 0.0
             for j in range(len(dMatrizA)):
-                print(f'({datos[i][1]} * {dMatrizA[j]}) + ', end='')
+                # print(f'({datos[i][1]} * {dMatrizA[j]}) + ', end='')
+                
                 suma += operaciones.calculo(datos[i][1], self.alpha, self.beta, j) * dMatrizA[j]
-            print()
+            # print()
             dMatrizRec[i][1] = suma
 
         return dMatrizRec
@@ -125,11 +133,11 @@ class Matrices:
 
     def MatrizDatos(self):
         v = self.MatrizBidimensional(self.iGrado + 1, len(self.dDatos))
-        print('Datos de la matriz')
+        # print('Datos de la matriz')
         for i in range(self.iGrado + 1):
             for j in range(len(self.dDatos)):
                 v[i][j] = operaciones.calculo(self.dDatos[j][1], self.alpha, self.beta, i)
-        print(len(v) * len(v[0]))
+        # print(len(v) * len(v[0]))
         self.Orto(v)
 
         return v

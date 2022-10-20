@@ -37,35 +37,9 @@ def data4TalbesB(request):
     return render(request, "CloudDashboardApp/tables-basic.html")
 def data3TablesD(request):
     return render(request, "CloudDashboardApp/tables-data.html")
-def datauiAlerts(request):
-    return render(request, "CloudDashboardApp/ui-alerts.html")
-def data7UiModals(request):
-    return render(request, "CloudDashboardApp/ui-modals.html")
-def data8UiP(request):
-    return render(request, "CloudDashboardApp/ui-progressbar.html")
-def data9IuSwi(request):
-    return render(request, "CloudDashboardApp/ui-switches.html")
 def data10UiTabs(request):
     return render(request, "CloudDashboardApp/ui-tabs.html")
 def data11UiBut(request):
     return render(request, "CloudDashboardApp/ui-buttons.html")
-def data12UiTyp(request):
-    return render(request, "CloudDashboardApp/ui-typgraphy.html")
 def data13Widgets(request):
     return render(request, "CloudDashboardApp/widgets.html")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
