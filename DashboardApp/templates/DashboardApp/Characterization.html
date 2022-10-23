@@ -3,46 +3,124 @@
 {% load static %}
 
 {% block content %}
-
-<div class="content">
-  <div class="row">
-    <form action="add" method="POST">
-      {% csrf_token %}
-      <div class="mb-3">
-        <label for="" class="form-label">CALCULAR CARACTERIZACION:</label>
-        <textarea readonly class="form-control" style="height: 300px; width: 850px; margin-left: 35px;" rows="3">
-          
-          {{dMR}}
-        
-        </textarea>
-        <label>Tiempo de ejecucucion: {{Final}}</label>
+<div class="breadcrumbs">
+  <div class="breadcrumbs-inner">
+    <div class="row m-0">
+      <div class="col-sm-4">
+        <div class="page-header float-left">
+          <div class="page-title">
+            <h1>Dashboard</h1>
+          </div>
+        </div>
       </div>
-  
-    <div class="col-lg-6"></div>
-    <input  class="btn btn-primary" type="submit" value="CALCULAR">
-    </form>
-  </div>
-
-   
- <!-- /# column -->
-<!-- .content -->
-
-<div class="clearfix"></div>
-
-<footer class="site-footer"> 
-  <div class="footer-inner bg-white">
-    <div class="row">
-      <div class="col-sm-6">
-        Copyright &copy; 2022 Ela Admin
-      </div>
-      <div class="col-sm-6 text-right">
-        Designed by
-        <a href="https://colorlib.com">Colorlib</a>
+      <div class="col-sm-8">
+        <div class="page-header float-right">
+          <div class="page-title">
+            <ol class="breadcrumb text-right">
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">UI Elements</a></li>
+              <li class="active">Modulo 1</li>
+            </ol>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</footer>
 </div>
+
+<div class="content">
+
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card" style="height:500px;">
+          <div class="card-body">
+            <h4 class="box-title">CARACTERIZACION</h4>
+          </div>
+          
+          
+            
+            <div class="col-lg-12">
+              
+              <div class="card-body">
+                <div id="traffic-chart" class="traffic-chart">
+
+                  <div class="row">
+                    <form action="add" method="POST">
+                      {% csrf_token %}
+                      <div class="mb-3">
+
+                        
+                          <select name="DATACSV" id="lang" style="margin-left: 35px; margin-right: 35px;">
+                            <option value="">Seleccione una opcion</option>
+                            {% for datalink in datalinks %}
+                            <option  name="item_text" id="item_text" value="{{ datalink.id }}">{{ datalink.nombre }}</option>
+                            {% endfor %}
+                            
+                          </select>
+
+                          <button action="add" type="submit" class="btn btn-outline-success">
+                            <i class="fa fa-star"></i>
+                            &nbsp; CALCULAR CARACTERIZACION
+                          </button>
+
+                          <button type="button" class="btn btn-outline-danger">
+                            <i class="fa fa-exclamation-triangle"></i>
+                            &nbsp; Cancelar
+                          </button>
+                          <br>
+                        <br>
+                        <textarea readonly class="form-control"
+                          style="height: 200px; width: 750px; margin-left: 35px; margin-right: 35px;" rows="3">
+
+                          {{dMR}}
+                        
+                        </textarea>
+
+
+                        <br>
+                        <label style="margin-left: 35px;">Tiempo de ejecucucion: {{Final}}</label>
+
+                       
+                        <br>
+                      </div>
+
+
+                      <div class="col-lg-6">
+                        <div class="card" style="width: 400px; margin-left: 85px; margin-top: 25px;">
+                            <div class="progress mb-2">
+                              <div
+                                class="progress-bar bg-success"
+                                role="progressbar"
+                                style="width: 25%;"
+                                aria-valuenow="25"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                              >
+                                25%
+                              </div>
+                            </div>
+                        </div>
+                      
+                      </div>
+
+                    </form>
+
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+
 
 
 {% endblock %}

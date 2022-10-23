@@ -33,8 +33,7 @@ def data2formsB(request):
     return render(request, "CloudDashboardApp/forms-basic.html")
 def index(request):
     return render(request, "CloudDashboardApp/index.html")
-def data4TalbesB(request):
-    return render(request, "CloudDashboardApp/tables-basic.html")
+
 def data3TablesD(request):
     return render(request, "CloudDashboardApp/tables-data.html")
 def data10UiTabs(request):
