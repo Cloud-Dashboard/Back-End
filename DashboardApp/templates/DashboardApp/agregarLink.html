@@ -54,7 +54,7 @@
                          type="{{campo.field.widget.input_type}}" 
                          class="form-control" 
                          name="{{ campo.name }}"
-                          id="{{ campo.id }}"
+                          id="{{  campo.auto_id }}"
                           aria-describedby="helpId"
                            placeholder="{{ campo.label }}">
                       </div>
@@ -106,4 +106,6 @@
 
 <!-- Right Panel -->
 
+
+<script src="{% static 'DashboardApp/js/gestion.js' %}"></script>
 {% endblock %}

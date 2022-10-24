@@ -37,83 +37,74 @@
           <div class="card-body">
             <h4 class="box-title">CARACTERIZACION</h4>
           </div>
-          
-          
-            
-            <div class="col-lg-12">
-              
-              <div class="card-body">
-                <div id="traffic-chart" class="traffic-chart">
-
-                  <div class="row">
-                    <form action="add" method="POST">
-                      {% csrf_token %}
-                      <div class="mb-3">
-
-                        
-                          <select name="DATACSV" id="lang" style="margin-left: 35px; margin-right: 35px;">
-                            <option value="">Seleccione una opcion</option>
-                            {% for datalink in datalinks %}
-                            <option  name="item_text" id="item_text" value="{{ datalink.id }}">{{ datalink.nombre }}</option>
-                            {% endfor %}
-                            
-                          </select>
-
-                          <button action="add" type="submit" class="btn btn-outline-success">
-                            <i class="fa fa-star"></i>
-                            &nbsp; CALCULAR CARACTERIZACION
-                          </button>
-
-                          <button type="button" class="btn btn-outline-danger">
-                            <i class="fa fa-exclamation-triangle"></i>
-                            &nbsp; Cancelar
-                          </button>
-                          <br>
-                        <br>
-                        <textarea readonly class="form-control"
-                          style="height: 200px; width: 750px; margin-left: 35px; margin-right: 35px;" rows="3">
-
-                          {{dMR}}
-                        
-                        </textarea>
 
 
-                        <br>
-                        <label style="margin-left: 35px;">Tiempo de ejecucucion: {{Final}}</label>
 
-                       
-                        <br>
-                      </div>
+          <div class="col-lg-12">
+
+            <div class="card-body">
+              <div id="traffic-chart" class="traffic-chart">
+
+                <div class="row">
+                  <form action="add" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
 
 
-                      <div class="col-lg-6">
-                        <div class="card" style="width: 400px; margin-left: 85px; margin-top: 25px;">
-                            <div class="progress mb-2">
-                              <div
-                                class="progress-bar bg-success"
-                                role="progressbar"
-                                style="width: 25%;"
-                                aria-valuenow="25"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              >
-                                25%
-                              </div>
-                            </div>
+                      <select name="DATACSV" id="lang" style="margin-left: 35px; margin-right: 35px;">
+                        <option value="">Seleccione una opcion</option>
+                        {% for datalink in datalinks %}
+                        <option name="item_text" id="item_text" value="{{ datalink.id }}">{{ datalink.nombre }}</option>
+                        {% endfor %}
+
+                      </select>
+
+                      <button action="add" type="submit" class="btn btn-outline-success">
+                        <i class="fa fa-star"></i>
+                        &nbsp; CALCULAR CARACTERIZACION
+                      </button>
+
+                      <button type="button" class="btn btn-outline-danger">
+                        <i class="fa fa-exclamation-triangle"></i>
+                        &nbsp; Cancelar
+                      </button>
+                      <br>
+                      <br>
+
+                      <textarea readonly class="form-control"
+                        style="height: 200px; width: 750px; margin-left: 35px; margin-right: 35px;" rows="3">
+{% if dMR or y or y2  %}Calculando datos de la matriz: {{dMR}}
+
+Calculando datos normalizados: {{y}}
+
+Calculando datos caracterizados: {{y2}}
+{% endif %}</textarea>
+                      <br>
+                      <label style="margin-left: 35px;">Tiempo de ejecucucion: {{Final}}</label>
+                      <br>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="card" style="width: 400px; margin-left: 85px; margin-top: 25px;">
+                        <div class="progress mb-2">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">
+                            25%
+                          </div>
                         </div>
-                      
                       </div>
 
-                    </form>
+                    </div>
 
-                  </div>
-
-
+                  </form>
 
                 </div>
+
+
+
               </div>
             </div>
-          
+          </div>
+
         </div>
       </div>
     </div>

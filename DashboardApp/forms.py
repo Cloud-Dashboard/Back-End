@@ -7,4 +7,6 @@ class datalinkForm(forms.ModelForm):
     class Meta:
         model= datalink
         fields = '__all__'
+    
+        
 
