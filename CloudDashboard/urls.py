@@ -20,6 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     path('',include('CloudDashboardApp.urls')),
-    path('',include('DashboardApp.urls')),
     
 ]

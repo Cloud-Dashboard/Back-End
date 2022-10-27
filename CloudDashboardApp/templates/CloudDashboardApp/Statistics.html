@@ -1,0 +1,411 @@
+{% extends "CloudDashboardApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="breadcrumbs">
+  <div class="breadcrumbs-inner">
+    <div class="row m-0">
+      <div class="col-sm-4">
+        <div class="page-header float-left">
+          <div class="page-title">
+            <h1>Tables</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="page-header float-right">
+          <div class="page-title">
+            <ol class="breadcrumb text-right">
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Tables  </a></li>
+              <li class="active">Modulo </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="animated fadeIn" >
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card" style="height:280px;">
+          <div class="card-body">
+            <h4 class="box-title">COVID-19</h4>
+          </div>
+
+
+
+          <div class="col-lg-12">
+
+            <div class="card-body">
+              <div id="traffic-chart" class="traffic-chart">
+
+                <div class="row">
+                                  
+
+                </div>
+                <div class="data-utils">
+                <div id="std"></div>
+                <div id="min"></div>
+                <div id="max"></div>
+                <div id="extent"></div>
+                <div id="sum" ></div>
+                <div id="median"></div>
+                <div id="asc"></div>
+                <div id="desc"></div>
+                <div id="queantile"></div>
+                </div>
+                 
+            <div class="clearfix"></div>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card" style="height:280px;">
+          <div class="card-body">
+            <h4 class="box-title">INFLUENZA</h4>
+          </div>
+
+
+
+          <div class="col-lg-12">
+
+            <div class="card-body">
+              <div id="traffic-chart" class="traffic-chart">
+
+                <div class="row">
+                  <div class="col-sm-12 mb-4">
+                    <div class="card-group">
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-users"></i>
+                          </div>
+        
+                          <div class="data-utils">
+                            <div id="min">87500</div>
+                          </div>
+        
+                    <small class="text-muted text-uppercase font-weight-bold">
+                            Minimo
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-1"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-user-plus"></i>
+                          </div>
+                          <div class="h4 mb-0">
+                            <span class="count">385</span>
+                          </div>
+                          <small class="text-muted text-uppercase font-weight-bold">
+                            Maximo
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-2"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-cart-plus"></i>
+                          </div>
+                          <div class="h4 mb-0">
+                            <span class="count">1238</span>
+                          </div>
+                          <small class="text-muted text-uppercase font-weight-bold">
+                            Promedio
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-3"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-pie-chart"></i>
+                          </div>
+                          <div class="h4 mb-0">
+                            <span class="count">28</span>
+                            %
+                          </div>
+                          <small class="text-muted text-uppercase font-weight-bold">
+                            Desviacion Estandar
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-4"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <div class="clearfix"></div>
+
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card" style="height:280px;">
+          <div class="card-body">
+            <h4 class="box-title">DENGUE</h4>
+          </div>
+
+
+
+          <div class="col-lg-12">
+
+            <div class="card-body">
+              <div id="traffic-chart" class="traffic-chart">
+
+                <div class="row">
+                 
+                  <div class="col-sm-12 mb-4">
+                    <div class="card-group">
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-users"></i>
+                          </div>
+        
+                          <div class="h4 mb-0">
+                            <span class="count">87500</span>
+                          </div>
+        
+                    <small class="text-muted text-uppercase font-weight-bold">
+                            Minimo
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-1"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-user-plus"></i>
+                          </div>
+                          <div class="h4 mb-0">
+                            <span class="count">385</span>
+                          </div>
+                          <small class="text-muted text-uppercase font-weight-bold">
+                            Maximo
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-2"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-cart-plus"></i>
+                          </div>
+                          <div class="h4 mb-0">
+                            <span class="count">1238</span>
+                          </div>
+                          <small class="text-muted text-uppercase font-weight-bold">
+                            Promedio
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-3"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-pie-chart"></i>
+                          </div>
+                          <div class="h4 mb-0">
+                            <span class="count">28</span>
+                            %
+                          </div>
+                          <small class="text-muted text-uppercase font-weight-bold">
+                            Desviacion Estandar
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-4"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            <div class="clearfix"></div>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <d  iv class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card" style="height:280px;">
+          <div class="card-body">
+            <h4 class="box-title">SARAMPION</h4>
+          </div>
+
+
+
+          <div class="col-lg-12">
+
+            <div class="card-body">
+              <div id="traffic-chart" class="traffic-chart">
+
+                <div class="row">
+                  <div class="col-sm-12 mb-4">
+                    <div class="card-group">
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-users"></i>
+                          </div>
+        
+                          <div class="h4 mb-0">
+                            <span class="countSarampion"></span>
+                          </div>
+        
+                    <small class="text-muted text-uppercase font-weight-bold">
+                            Minimo
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-1"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-user-plus"></i>
+                          </div>
+                          <div class="h4 mb-0">
+                            <span class="count">385</span>
+                          </div>
+                          <small class="text-muted text-uppercase font-weight-bold">
+                            Maximo
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-2"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-cart-plus"></i>
+                          </div>
+                          <div class="h4 mb-0">
+                            <span class="count">1238</span>
+                          </div>
+                          <small class="text-muted text-uppercase font-weight-bold">
+                            Promedio
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-3"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                      <div class="card col-md-6 no-padding">
+                        <div class="card-body">
+                          <div class="h1 text-muted text-right mb-4">
+                            <i class="fa fa-pie-chart"></i>
+                          </div>
+                          <div class="h4 mb-0">
+                            <span class="count">28</span>
+                            %
+                          </div>
+                          <small class="text-muted text-uppercase font-weight-bold">
+                            Desviacion Estandar
+                          </small>
+                          <div
+                            class="progress progress-xs mt-3 mb-0 bg-flat-color-4"
+                            style="width: 40%; height: 5px;"
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+            <div class="clearfix"></div>
+
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+
+
+
+
+{% endblock %}

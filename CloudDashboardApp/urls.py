@@ -1,19 +1,16 @@
 from django.urls import path
-from CloudDashboardApp.views import lista
-from CloudDashboardApp.views import data13Widgets,index,data11UiBut,data10UiTabs,data3TablesD,data2formsB,data1ChartsF,data0ChartsC
+from CloudDashboardApp.views import Tables,Statistics
+from CloudDashboardApp.views import index, TableCOVID19
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('',index,name='index'),
-    path('lista',lista,name="lista"),
-    path('data13Widgets',data13Widgets,name='data13Widgets'),
-    path('data11UiBut',data11UiBut,name='data11UiBut'),
-    path('data10UiTabs',data10UiTabs,name='data10UiTabs'),
-    path('data3TablesD',data3TablesD,name='data3TablesD'),
-    path('data2formsB',data2formsB,name='data2formsB'),
-    path('data1ChartsF',data1ChartsF,name='data1ChartsF'),
-    path('data0ChartsC',data0ChartsC,name='data0ChartsC'),
+    path('Tables',Tables,name='Tables'),
+    path('Statistics',Statistics,name='Statistics'),
+    path('TableCOVID19',TableCOVID19,name='TableCOVID19'),
+
+    
     
 ]
 

@@ -1,0 +1,193 @@
+{% extends "CloudDashboardApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<div class="breadcrumbs">
+  <div class="breadcrumbs-inner">
+    <div class="row m-0">
+      <div class="col-sm-4">
+        <div class="page-header float-left">
+          <div class="page-title">
+            <h1>Tables</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="page-header float-right">
+          <div class="page-title">
+            <ol class="breadcrumb text-right">
+              <li><a href="#">Dashboard</a></li>
+              <li><a href="#">Tables  </a></li>
+              <li class="active">Modulo </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card" style="height:850px;">
+          <div class="card-body">
+            <h4 class="box-title">COVID-19</h4>
+          </div>
+
+
+
+          <div class="col-lg-12">
+
+            <div class="card-body">
+              <div id="traffic-chart" class="traffic-chart">
+
+                <div class="row">
+
+                   <div class="col">
+                <h1></h1>
+
+                <div id="table-containerCovid" ></div>
+            </div>
+
+
+
+                 
+
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card" style="height:850px;">
+          <div class="card-body">
+            <h4 class="box-title">INFLUENZA</h4>
+          </div>
+
+
+
+          <div class="col-lg-12">
+
+            <div class="card-body">
+              <div id="traffic-chart" class="traffic-chart">
+
+                <div class="row">
+                 
+                  <div class="col">
+                    <h1></h1>
+    
+                    <div id="table-containerInfluenza" ></div>
+                </div>
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card" style="height:850px;">
+          <div class="card-body">
+            <h4 class="box-title">DENGUE</h4>
+          </div>
+
+
+
+          <div class="col-lg-12">
+
+            <div class="card-body">
+              <div id="traffic-chart" class="traffic-chart">
+
+                <div class="row">
+                  <div class="col">
+                    <h1></h1>
+    
+                    <div id="table-containerDengue" ></div>
+                </div>
+
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="animated fadeIn">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card" style="height:850px;">
+          <div class="card-body">
+            <h4 class="box-title">SARAMPION</h4>
+          </div>
+
+
+
+          <div class="col-lg-12">
+
+            <div class="card-body">
+              <div id="traffic-chart" class="traffic-chart">
+
+                <div class="row">
+                  <div class="col">
+                    <h1></h1>
+                        
+                    <div id="table-containerSarampion"></div>
+                </div>
+
+                </div>
+
+
+
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+
+</div>
+
+
+
+{% endblock %}
