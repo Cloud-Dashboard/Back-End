@@ -1,23 +1,137 @@
 
 
-d3.csv("https://raw.githubusercontent.com/Cloud-Dashboard/Data-CSV/main/InfoDengue.csv", function(data1){
-    
+d3.csv("https://raw.githubusercontent.com/Cloud-Dashboard/Data-CSV/main/InfoDengue.csv", function (data) {
 
- 
-  data=(data1.map(function(d){ return d.Confirmados}));
+  data.forEach(function (d) {
+    d.Confirmados = +d.Confirmados;
+  });
 
-  const div = d3.select(".data-utils");
-  div.select("#std").text(d3.deviation(data));
-  div.select("#min").text(d3.min(data));
-  div.select("#max").text(d3.max(data));
-  div.select("#extent").text(d3.extent(data));
-  div.select("#sum").text(d3.sum(data));
-  div.select("#median").text(d3.median(data));
-  div.select("#mean").text(d3.mean(data));
-  div.select("#asc").text(data.sort(d3.ascending));
-  div.select("#desc").text(data.sort(d3.descending));
-  div.select("#quantile").text(d3.quantile(data.sort(d3.ascending), 0.25));
+  // Compute the extent of the data set in age and years.
+  var confirmadosmax = d3.max(data, function (d) {
+    return d.Confirmados;
+  }),
+    confirmadosmin = d3.min(data, function (d)  {
+      
+      return d.Confirmados || Infinity;
+    }),
+    confirmadosmean = d3.mean(data, function (d) {
+      return d.Confirmados;
+    }),
+    confirmadosstd = d3.deviation(data, function (d) {
+      return d.Confirmados;
+    });
+
+
+  d3.select(".minD").text(confirmadosmin);
+  d3.select(".maxD").text(confirmadosmax);
+  d3.select(".meanD").text(confirmadosmean);
+  d3.select(".stdD").text(confirmadosstd);
+
+
+  
 
 });
+
+
+
+d3.csv("https://raw.githubusercontent.com/Cloud-Dashboard/Data-CSV/main/InfoCOVID19.csv", function (data) {
+
+
+ data.forEach(function (d) {
+    d.Confirmados = +d.Confirmados;
+  });
+
+  // Compute the extent of the data set in age and years.
+  var confirmadosmax = d3.max(data, function (d) {
+    return d.Confirmados;
+  }),
+    confirmadosmin = d3.min(data, function (d)  {
+      
+      return d.Confirmados || Infinity;
+    }),
+    confirmadosmean = d3.mean(data, function (d) {
+      return d.Confirmados;
+    }),
+    confirmadosstd = d3.deviation(data, function (d) {
+      return d.Confirmados;
+    });
+
+
+  d3.select(".minC").text(confirmadosmin);
+  d3.select(".maxC").text(confirmadosmax);
+  d3.select(".meanC").text(confirmadosmean);
+  d3.select(".stdC").text(confirmadosstd);
+
+});
+
+
+
+
+d3.csv("https://raw.githubusercontent.com/Cloud-Dashboard/Data-CSV/main/InfoInfluenza.csv", function (data) {
+
+
+
+
+  data.forEach(function (d) {
+    d.AH1N12009 = +d.AH1N12009;
+  });
+
+  // Compute the extent of the data set in age and years.
+  var confirmadosmax = d3.max(data, function (d) {
+    return d.AH1N12009;
+  }),
+    confirmadosmin = d3.min(data, function (d)  {
+     
+      return d.AH1N12009 || Infinity;
+    }),
+    confirmadosmean = d3.mean(data, function (d) {
+      return d.AH1N12009;
+    }),
+    confirmadosstd = d3.deviation(data, function (d) {
+      return d.AH1N12009;
+    });
+
+
+
+  d3.select(".minA").text(confirmadosmin);
+  d3.select(".maxA").text(confirmadosmax);
+  d3.select(".meanA").text(confirmadosmean);
+  d3.select(".stdA").text(confirmadosstd);
+  
+});
+
+
+
+
+d3.csv("https://raw.githubusercontent.com/Cloud-Dashboard/Data-CSV/main/InfoSarampion.csv", function (data) {
+
+  data.forEach(function (d) {
+    d.CASOS = +d.CASOS;
+  });
+
+  // Compute the extent of the data set in age and years.
+  var confirmadosmax = d3.max(data, function (d) {
+    return d.CASOS;
+  }),
+    confirmadosmin = d3.min(data, function (d)  {
+      
+      return d.CASOS || Infinity;
+    }),
+    confirmadosmean = d3.mean(data, function (d) {
+      return d.CASOS;
+    }),
+    confirmadosstd = d3.deviation(data, function (d) {
+      return d.CASOS;
+    });
+
+
+  d3.select(".minS").text(confirmadosmin);
+  d3.select(".maxS").text(confirmadosmax);
+  d3.select(".meanS").text(confirmadosmean);
+  d3.select(".stdS").text(confirmadosstd);
+  
+
+});
+
 
 

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="es">
   <head>
     {% load static %}
 
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Dashboard Index</title>
-    <meta name="description" content="Ela Admin - HTML5 Admin Template" />
+    <title>Epidemic Dashboard </title>
+    <meta name="description" content="Dashboard"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="apple-touch-icon"  href="https://i.imgur.com/QRAUqs9.png" />
-    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png" />
+    <link rel="apple-touch-icon"  href="https://i.imgur.com/dbQv8h9.jpg" />
+    <link rel="shortcut icon" href="https://i.imgur.com/dbQv8h9.jpg" />
 
     <link
       rel="stylesheet"
@@ -105,23 +105,23 @@
                 Dashboard
               </a>
             </li>
-            <li class="menu-title">MODULOS</li>
+            <li class="menu-title">MODULES</li>
             <!-- /.menu-title -->
             <li class="menu-item-has-children dropdown">
               <a
-                href="#"
+                href="{% url 'Tables' %}"
                 class="dropdown-toggle"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <i class="menu-icon fa fa-cogs"></i>
+                <i class="menu-icon fa fa-bars"></i>
                 Tables
               </a>
               <ul class="sub-menu children dropdown-menu">
                  <li>
                   <i class="fa fa-bars"></i>
-                  <a href="{% url 'Tables' %}">Tabs</a>
+                  <a href="{% url 'Tables' %}">Tables Data</a>
                 </li>
                 </ul>
             </li>
@@ -129,7 +129,7 @@
 
             <li class="menu-item-has-children dropdown">
               <a
-                href="#"
+                href="{% url 'Statistics' %}"
                 class="dropdown-toggle"
                 data-toggle="dropdown"
                 aria-haspopup="true"
@@ -141,7 +141,7 @@
               <ul class="sub-menu children dropdown-menu">
                 <li>
                   <i class="fa fa-table"></i>
-                  <a href="{% url 'Statistics' %}">Basic Table</a>
+                  <a href="{% url 'Statistics' %}">Statistics Data</a>
                 </li>
                 
               </ul>
@@ -165,7 +165,8 @@
         <div class="top-left">
           <div class="navbar-header">
             <a class="navbar-brand" href="./">
-              <img src="{% static 'CloudDashboardApp/img/tulogo.png' %}" alt="Logo" width="60" />
+              <img src="{% static 'CloudDashboardApp/img/Meta.png' %}" alt="Logo" width="40" />
+              META-EPIDEMIC
             </a>
             <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
           </div>
@@ -195,11 +196,10 @@
           <div class="footer-inner bg-white">
             <div class="row">
               <div class="col-sm-6">
-                Copyright &copy; 2018 Ela Admin
               </div>
               <div class="col-sm-6 text-right">
                 Designed by
-                <a>Meta-Pandemic</a>               
+                <a>Meta-Epidemic</a>               
                 
                       
               </div>

@@ -14,13 +14,18 @@ CsvToHtmlTable.init({
         delimiter: '"'
     },
     datatables_options: {
-        "language": {
-            "search": "Buscar:"
-          },
+
+       
+
+        dom:
+        "<f>"+
+        "<'row'<'col-sm-12'tr>>" +
+        "<'row'<'col-sm-4'i><'col-sm-4 text-center'l><'col-sm-4'p>>",
+    
         paging: true,
         info: false,
-        lengthChange: false, /*cambiar a "false" para que solo muestre de 10 en 10 registros*/
-        
+        lengthChange: false,
+       
     },
     
 

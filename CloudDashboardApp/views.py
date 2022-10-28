@@ -9,5 +9,3 @@ def Tables(request):
     return render(request, "CloudDashboardApp/Tables.html")
 def Statistics(request):
     return render(request, "CloudDashboardApp/Statistics.html")
-def TableCOVID19(request):
-    return render(request, "CloudDashboardApp/TableCOVID19.html")
