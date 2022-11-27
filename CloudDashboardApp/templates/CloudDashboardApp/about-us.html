@@ -1,0 +1,51 @@
+{% extends "CloudDashboardApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+  
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
+        id="navbarBlur"
+        data-scroll="true"
+      ></nav>
+      <!-- End Navbar -->
+      <div class="container-fluid py-4">
+        <div class="row min-vh-80">
+          <div class="col-12">
+            <div class="card mt-4">
+              <div
+                class="card-header p-0 position-relative mt-n4 mx-3 z-index-2"
+              >
+                <div
+                  class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3"
+                >
+                  <h3 class="text-white ps-3">
+                    Acerca de...
+                  </h3>
+                </div>
+              </div>
+              <div class="card-body px-5">
+                <p style="text-align: justify;">
+                  <strong>
+                    META-EPIDEMIC es un dashboard en el que en base a las
+                    epidemias COVID-19, Sarampión, Dengue e Influenza se
+                    desplegaron diferentes graficas con los datos normalizados y
+                    caracterizados extraidos de un repositorio de github ademas
+                    de mostrar las tablas con los datos de origen de las
+                    epidemias y otro apartado calculando las diferentes sobre
+                    estos datos.
+                  </strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+  
+    
+    
+{% endblock %}

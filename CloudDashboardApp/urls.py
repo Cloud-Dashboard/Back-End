@@ -1,13 +1,17 @@
 from django.urls import path
-from CloudDashboardApp.views import Tables,Statistics
-from CloudDashboardApp.views import index
+from CloudDashboardApp.views import dashboard,estadistica,about,tablas
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('',index,name='index'),
-    path('Tables',Tables,name='Tables'),
-    path('Statistics',Statistics,name='Statistics'),  
+    
+    path('',dashboard,name='dashboard'),  
+    path('estadistica',estadistica,name='estadistica'),  
+    path('tablas',tablas,name='tablas'),
+    path('about',about,name='about'),
+      
+
+ 
 ]
 
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

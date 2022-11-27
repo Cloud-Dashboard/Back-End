@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# urlpatterns en CloudDashboard = hace referencia a admin y a las apps CloudDashboardApp y CharacterizationApp
+  
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
     path('',include('CloudDashboardApp.urls')),
-    
+    path('',include('CharacterizationApp.urls')),
 ]
