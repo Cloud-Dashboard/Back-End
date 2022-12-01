@@ -8,10 +8,7 @@ urlpatterns = [
     path('',dashboard,name='dashboard'),  
     path('estadistica',estadistica,name='estadistica'),  
     path('tablas',tablas,name='tablas'),
-    path('about',about,name='about'),
-      
-
- 
+    path('about',about,name='about'), 
 ]
 
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -29,7 +29,7 @@ def create_student(self, request, queryset):
 
         dat = queryset.update(nombre=nombre)
 
-        nombre = nombre + "_Caracterizado2.csv"
+        nombre = nombre + "_Caracterizado.csv"
             
 
         grado = 60
@@ -61,7 +61,7 @@ def create_student(self, request, queryset):
         token = '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'
 
         g = gg(token)
-        repo = g.get_organization('Cloud-Dashboard').get_repo('Data-CSV')
+        repo = g.get_organization('Cloud-Dashboard').get_repo('Characterization-CSV')
         all_files = []
         contents = repo.get_contents("")
         while contents:
@@ -83,16 +83,24 @@ def create_student(self, request, queryset):
             contents = repo.get_contents(git_file)
             repo.update_file(contents.path, "committing files", content, contents.sha, branch="main")
             print(git_file + ' UPDATED')
+            self.message_user(request, ngettext(
+                '%d se ha actualizado un nuevo csv caracterizado.',
+                dat,
+            ) % dat, messages.SUCCESS)
         else:
             repo.create_file(git_file, "committing files", content, branch="main")
             print(git_file + ' CREATED')
+                    
+            self.message_user(request, ngettext(
+                '%d se ha creado un nuevo csv caracterizado.',
+                dat,
+            ) % dat, messages.SUCCESS)
+        break
+
+    
         
     
-    self.message_user(request, ngettext(
-        '%d se ha creado un nuevo csv caracterizado.',
-        '%d se han creado varios csv caracterizados.',
-        dat,
-    ) % dat, messages.SUCCESS)
+   
     
         
 class ArticleAdmin(admin.ModelAdmin):
