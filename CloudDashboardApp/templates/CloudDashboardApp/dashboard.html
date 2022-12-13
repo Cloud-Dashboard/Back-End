@@ -4,208 +4,172 @@
 
 {% block content %}
 
- <!-- Navbar -->
- <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
- data-scroll="true">
- <div class="container-fluid py-1 px-3">
-   <nav aria-label="breadcrumb">
-     <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-       <li class="breadcrumb-item text-sm">
-         <a class="font-weight-bold" href="{% url 'dashboard' %}">Dashboard</a>
-         
-       </li>
-     </ol>
-     <!-- <h6 class="font-weight-bolder mb-0">Dashboard</h6> -->
-   </nav>
-   <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-     <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
-       <div class="sidenav-toggler-inner">
-         <i class="sidenav-toggler-line"></i>
-         <i class="sidenav-toggler-line"></i>
-         <i class="sidenav-toggler-line"></i>
-       </div>
-     </a>
-   </li>
- </div>
+<!-- Navbar -->
+<nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+  data-scroll="true">
+  <div class="container-fluid py-1 px-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+        <li class="breadcrumb-item text-sm">
+          <a class="opacity-5" href="{% url 'dashboard' %}">Dashboard</a>
+        </li>
+      </ol>
+      <h6 class="font-weight-bolder mb-0">Dashboard</h6>
+    </nav>
+
+  </div>
 </nav>
+
+
 <!-- End Navbar -->
 
+<div class="row">
+</div>
+<!-- covid -->
+<div class="container-fluid py-4">
   <div class="row">
-  </div>
-  <!-- covid -->
-  <div class="container-fluid py-4">
-    <div class="row">
-      <div class="col-12">
-        <div class="card my-4">
-          <div
-            class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent"
-          >
-            <div
-              class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1"
-            >
+    <div class="col-12">
+      <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+          <div class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1">
             <h6 class="text-white text-capitalize ps-3">GRÁFICA DE COVID-19</h6>
-              <div class="chart"></div>
-            </div>
-
+            <div class="chart"></div>
           </div>
-          <div class="card-body">
-            <h6 class="mb-0"></h6>
-
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card-body">
-  
-                  <svg class="svgCovid" style="height: 500px; width:900px;"></svg>
-  
-                </div>
+        </div>
+        <div class="card-body">
+          <h6 class="mb-0"></h6>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card-body">
+                <!-- Contenido -->
+                <svg class="svgCovid" style="height: 500px; width:900px;"></svg>
               </div>
-  
-              <!-- /.card-body -->
             </div>
-
-            <hr class="dark horizontal" />
-            <div class="d-flex">
-              <i class="material-icons text-sm my-auto me-1">help</i>
-              <p class="mb-0 text-sm">
-                Seleccione la región de arriba usando el mouse para
-                acercar la gráfica.
-              </p>
-            </div>
+          </div>
+          <hr class="dark horizontal" />
+          <div class="d-flex">
+            <i class="material-icons text-sm my-auto me-1">help</i>
+            <p class="mb-0 text-sm">
+              <!-- Texto de ayuda -->
+              Seleccione la región de arriba usando el mouse para
+              acercar la gráfica.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- sarampion -->
-  <div class="container-fluid py-4">
-    <div class="row">
-      <div class="col-12">
-        <div class="card my-4">
-          <div
-            class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent"
-          >
-            <div
-              class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1"
-            >
+</div>
+<!-- sarampion -->
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+          <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
             <h6 class="text-white text-capitalize ps-3">GRÁFICA DE SARAMPIÓN</h6>
-              <div class="chart"></div>
-            </div>
+            <div class="chart"></div>
           </div>
-          <div class="card-body">
-            <h6 class="mb-0"></h6>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card-body">
-  
-                  <svg class="svgSarampion" style="height: 500px; width:900px;"></svg>
-  
-                </div>
+        </div>
+        <div class="card-body">
+          <h6 class="mb-0"></h6>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card-body">
+
+                <svg class="svgSarampion" style="height: 500px; width:900px;"></svg>
+
               </div>
-  
-              <!-- /.card-body -->
             </div>
 
-            <hr class="dark horizontal" />
-            <div class="d-flex">
-              <i class="material-icons text-sm my-auto me-1">help</i>
-              <p class="mb-0 text-sm">
-                Seleccione la región de arriba usando el mouse para
-                acercar la gráfica.
-              </p>
-            </div>
+          </div>
+
+          <hr class="dark horizontal" />
+          <div class="d-flex">
+            <i class="material-icons text-sm my-auto me-1">help</i>
+            <p class="mb-0 text-sm">
+              Seleccione la región de arriba usando el mouse para
+              acercar la gráfica.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- dengue -->
-
-  <div class="container-fluid py-4">
-    <div class="row">
-      <div class="col-12">
-        <div class="card my-4">
-          <div
-            class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent"
-          >
-            <div
-              class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1"
-            >
+</div>
+<!-- dengue -->
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+          <div class="bg-gradient-dark shadow-dark border-radius-lg py-3 pe-1">
             <h6 class="text-white text-capitalize ps-3">GRÁFICA DE DENGUE</h6>
-              <div class="chart"></div>
-            </div>
+            <div class="chart"></div>
           </div>
-          <div class="card-body">
-            <h6 class="mb-0"></h6>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card-body" >
-  
-                  <svg class="svgDengue" style="height: 500px; width:900px;"></svg>
-  
-                </div>
+        </div>
+        <div class="card-body">
+          <h6 class="mb-0"></h6>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card-body">
+
+                <svg class="svgDengue" style="height: 500px; width:900px;"></svg>
+
               </div>
-  
-              <!-- /.card-body -->
             </div>
 
-            <hr class="dark horizontal" />
-            <div class="d-flex">
-              <i class="material-icons text-sm my-auto me-1">help</i>
-              <p class="mb-0 text-sm">
-                Seleccione la región de arriba usando el mouse para
-                acercar la gráfica.
-              </p>
-            </div>
+          </div>
+
+          <hr class="dark horizontal" />
+          <div class="d-flex">
+            <i class="material-icons text-sm my-auto me-1">help</i>
+            <p class="mb-0 text-sm">
+              Seleccione la región de arriba usando el mouse para
+              acercar la gráfica.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- influenza -->
-  <div class="container-fluid py-4">
-    <div class="row">
-      <div class="col-12">
-        <div class="card my-4">
-          <div
-            class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent"
-          >
-            <div
-              class="bg-gradient-info shadow-info border-radius-lg py-3 pe-1"
-            >
+</div>
+<!-- influenza -->
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="card my-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
+          <div class="bg-gradient-info shadow-info border-radius-lg py-3 pe-1">
             <h6 class="text-white text-capitalize ps-3">GRÁFICA DE INFLUENZA</h6>
-              <div class="chart"></div>
-            </div>
+            <div class="chart"></div>
           </div>
-          <div class="card-body">
-            <h6 class="mb-0"></h6>
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="card-body">
-  
-                  <svg class="svgInfluenza" style="height: 500px; width:900px;"></svg>
-  
-                </div>
+        </div>
+        <div class="card-body">
+          <h6 class="mb-0"></h6>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="card-body">
+
+                <svg class="svgInfluenza" style="height: 500px; width:900px;"></svg>
+
               </div>
-  
-              <!-- /.card-body -->
             </div>
 
-            <hr class="dark horizontal" />
-            <div class="d-flex">
-              <i class="material-icons text-sm my-auto me-1">help</i>
-              <p class="mb-0 text-sm">
-                Seleccione la región de arriba usando el mouse para
-                acercar la gráfica.
-              </p>
-            </div>
+          </div>
+
+          <hr class="dark horizontal" />
+          <div class="d-flex">
+            <i class="material-icons text-sm my-auto me-1">help</i>
+            <p class="mb-0 text-sm">
+              Seleccione la región de arriba usando el mouse para
+              acercar la gráfica.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
-
-     
+</div>
 
 {% endblock %}

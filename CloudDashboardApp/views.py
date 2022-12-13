@@ -6,6 +6,7 @@ from django.shortcuts import render
 #Renderizar la plantilla de dashboard pasandole el contexto a travez del render
 def dashboard(request):
     return render(request, "CloudDashboardApp/dashboard.html")
+    
 #Renderizar la plantilla de tablas pasandole el contexto a travez del render
 def tablas(request):
     return render(request, "CloudDashboardApp/tablas.html")

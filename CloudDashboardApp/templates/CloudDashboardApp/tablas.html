@@ -3,7 +3,6 @@
 {% load static %}
 
 {% block content %}
-
 <!-- Navbar -->
 <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
   data-scroll="true">
@@ -14,29 +13,23 @@
           <a class="opacity-5 " href="{% url 'dashboard' %}">Dashboard</a>
         </li>
         <li class="breadcrumb-item text-sm text-dark font-weight-bold active" aria-current="page">
-          
+
           <a class="font-weight-bold" href="{% url 'tablas' %}">Tablas</a>
 
 
         </li>
       </ol>
-      <!-- <h6 class="font-weight-bolder mb-0">Tablas</h6> -->
+      <h6 class="font-weight-bolder mb-0">Tablas</h6>
     </nav>
-    <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-      <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
-        <div class="sidenav-toggler-inner">
-          <i class="sidenav-toggler-line"></i>
-          <i class="sidenav-toggler-line"></i>
-          <i class="sidenav-toggler-line"></i>
-        </div>
-      </a>
-    </li>
+
   </div>
 </nav>
 <!-- End Navbar -->
 
+<!-- Tablas  -->
 <div class="container-fluid py-4">
   <div class="row">
+    <!-- Tabla COVID-19 -->
     <div class="col-12">
       <div class="card my-4">
         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -46,30 +39,23 @@
         </div>
         <div class="card-body px-0 pb-2">
           <div class="table-responsive p-0">
-
             <div class="col-lg-12">
-
               <div class="card-body">
-  
-                  <div class="row">
-  
-                     <div class="col">
-                  <h1></h1>
-  
-                  <div id="table-containerCovid" ></div>
-                  
-  
+                <div class="row">
+                  <div class="col">
+                    <h1></h1>
+                    <!-- Contenido de la tabla -->
+                    <div id="table-containerCovid"></div>
+
                   </div>
-  
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
       </div>
     </div>
-
+    <!-- Tabla Sarampion -->
     <div class="col-12">
       <div class="card my-4">
         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -83,19 +69,15 @@
             <div class="col-lg-12">
 
               <div class="card-body">
-                
-  
-                  <div class="row">
-                    <div class="col">
-                      <h1></h1>
-                          
-                      <div id="table-containerSarampion"></div>
+                <div class="row">
+                  <div class="col">
+                    <h1></h1>
+                    <!-- Contenido de la tabla -->
+                    <div id="table-containerSarampion"></div>
                   </div>
-  
-                  </div>
-  
-  
+                </div>
               </div>
+
             </div>
 
 
@@ -103,7 +85,7 @@
         </div>
       </div>
     </div>
-
+    <!-- Tabla Dengue -->
     <div class="col-12">
       <div class="card my-4">
         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -113,30 +95,26 @@
         </div>
         <div class="card-body px-0 pb-2">
           <div class="table-responsive p-0">
- <div class="col-lg-12">
+            <div class="col-lg-12">
 
-            <div class="card-body">
+              <div class="card-body">
 
                 <div class="row">
                   <div class="col">
                     <h1></h1>
-    
-                    <div id="table-containerDengue" ></div>
-                
-
+                    <!-- Contenido de la tabla -->
+                    <div id="table-containerDengue"></div>
+                  </div>
                 </div>
-
-
 
               </div>
             </div>
-          </div>
-            
+
           </div>
         </div>
       </div>
     </div>
-
+    <!-- Tabla Influenza -->
     <div class="col-12">
       <div class="card my-4">
         <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -150,19 +128,15 @@
             <div class="col-lg-12">
 
               <div class="card-body">
-  
-                  <div class="row">
-                   
-                    <div class="col">
-                      <h1></h1>
-      
-                      <div id="table-containerInfluenza" ></div>
+                <div class="row">
+                  <div class="col">
+                    <h1></h1>
+                    <!-- Contenido de la tabla -->
+                    <div id="table-containerInfluenza"></div>
                   </div>
-  
-  
-  
                 </div>
               </div>
+
             </div>
 
           </div>
@@ -170,86 +144,5 @@
       </div>
     </div>
   </div>
-  
-  <!-- <div class="row">
-    <div class="col-12">
-      <div class="card my-4">
-        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-          <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-            <h6 class="text-white text-capitalize ps-3">
-              Projects table
-            </h6>
-          </div>
-        </div>
-        <div class="card-body px-0 pb-2">
-          <div class="table-responsive p-0">
-            <table class="table align-items-center justify-content-center mb-0">
-              <thead>
-                <tr>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                    Project
-                  </th>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                    Budget
-                  </th>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                    Status
-                  </th>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder text-center opacity-7 ps-2">
-                    Completion
-                  </th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="d-flex px-2">
-                      <div>
-                        <img src="{% static 'CloudDashboardApp/img/github.svg' %}" class="avatar avatar-sm rounded-circle me-2"
-                          alt="invision" />
-                      </div>
-                      <div class="my-auto">
-                        <h6 class="mb-0 text-sm">Github</h6>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <p class="text-sm font-weight-bold mb-0">$5,000</p>
-                  </td>
-                  <td>
-                    <span class="text-xs font-weight-bold">done</span>
-                  </td>
-                  <td class="align-middle text-center">
-                    <div class="d-flex align-items-center justify-content-center">
-                      <span class="me-2 text-xs font-weight-bold">
-                        100%
-                      </span>
-                      <div>
-                        <div class="progress">
-                          <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="100"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="align-middle">
-                    <button class="btn btn-link text-secondary mb-0" aria-haspopup="true" aria-expanded="false">
-                      <i class="fa fa-ellipsis-v text-xs"></i>
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  
 </div>
-
-
-
 {% endblock %}

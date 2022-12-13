@@ -4,48 +4,188 @@
 
 {% block content %}
 
-  
-      <!-- Navbar -->
-      <nav
-        class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl"
-        id="navbarBlur"
-        data-scroll="true"
-      ></nav>
-      <!-- End Navbar -->
-      <div class="container-fluid py-4">
-        <div class="row min-vh-80">
-          <div class="col-12">
-            <div class="card mt-4">
-              <div
-                class="card-header p-0 position-relative mt-n4 mx-3 z-index-2"
-              >
-                <div
-                  class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3"
-                >
-                  <h3 class="text-white ps-3">
-                    Acerca de...
-                  </h3>
-                </div>
-              </div>
-              <div class="card-body px-5">
-                <p style="text-align: justify;">
-                  <strong>
-                    META-EPIDEMIC es un dashboard en el que en base a las
-                    epidemias COVID-19, Sarampión, Dengue e Influenza se
-                    desplegaron diferentes graficas con los datos normalizados y
-                    caracterizados extraidos de un repositorio de github ademas
-                    de mostrar las tablas con los datos de origen de las
-                    epidemias y otro apartado calculando las diferentes sobre
-                    estos datos.
-                  </strong>
-                </p>
-              </div>
-            </div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
+  data-scroll="true">
+  <div class="container-fluid py-1 px-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+        <li class="breadcrumb-item text-sm">
+          <a class="opacity-5 " href="{% url 'dashboard' %}">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item text-sm text-dark active" aria-current="page">
+          <a class="font-weight-bold" href="{% url 'about' %}">Acerca de...</a>
+        </li>
+      </ol>
+      <h6 class="font-weight-bolder mb-0">Acerca de...</h6>
+    </nav>
+
+  </div>
+</nav>
+<!-- End Navbar -->
+<div class="container-fluid py-4">
+  <div class="row min-vh-80">
+    <div class="col-12">
+      <div class="card mt-4">
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+          <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+            <h3 class="text-white ps-3">
+              Acerca de...
+            </h3>
           </div>
         </div>
-        
+        <div class="card-body px-5">
+          <p style="text-align: justify;">
+            <strong>
+              META-EPIDEMIC es un dashboard en el que en base a las
+              epidemias COVID-19, Sarampión, Dengue e Influenza se
+              desplegaron diferentes graficas con los datos normalizados y
+              caracterizados extraidos de un repositorio de github
+              <a href="https://github.com/Cloud-Dashboard/Data-CSV">Cloud-Dashboard/Data-CSV"</a>
+              ademas de mostrar las tablas con los datos de origen de las
+              epidemias y otro apartado calculando las diferentes sobre
+              estos datos.
+            </strong>
+            <strong>
+
+
+            </strong>
+          </p>
+
+          <p style="text-align: justify;">
+            <strong>
+              El dashboard es una visualización de datos que comprende la información más importante para el seguimiento
+              de los resultados de información, dispuesta de una forma resumida y jerarquizada para ser monitoreada y
+              analizada de un simple vistazo.
+
+              En el presente proyecto, se desarrolló un cloud dashboard para la visualización de información matemática,
+              estadística y gráfica sobre el comportamiento epidemiológico de enfermedades procedente de un sistema para
+              caracterizar automáticamente la propagación de epidemias en México (COVID-19, Dengue, Sarampión e
+              Influenza). En el cloud dashboard se tiene el módulo de gráficas en el que se visualiza la información de
+              las epidemias caracterizadas, un módulo con tablas que contienen la información de origen de cada epidemia
+              y en las que se puede filtrar la información y realizar un reporte, además un módulo para observar datos
+              estadísticos de las epidemias en el que también se puede generar un reporte.
+            </strong>
+          </p>
+          <br>
+          <h3>
+            COVID-19
+          </h3>
+          <p style="text-align: justify;">
+            <strong>
+              En China, el 31 de diciembre de 2019 se tenían un total de 26 casos y una persona fallecida con
+              diagnóstico de neumonía con etiología desconocida1. Estos casos tuvieron su origen en el mercado mayorista
+              de mariscos Huanan de Wuhan2. El 7 de enero de 2020, en el Centro Chino para el Control y la Prevención de
+              Enfermedades (CCDC) se identificó el agente causante de la neumonía desconocida como un coronavirus agudo
+              severo relacionado con el síndrome respiratorio agudo, al que se le denominó SARS-CoV-2, por su similitud
+              con el SARS-CoV descubierto en 2003.
+            </strong>
+
+            <br>
+            <strong>
+              El primer caso de COVID-19 se detectó en México el 27 de febrero de 2020. El 30 de abril, 64 días después
+              de este primer diagnóstico, el número de pacientes aumentó exponencialmente, alcanzando un total de 19.224
+              casos confirmados y 1.859 (9,67%) fallecidos. En respuesta a este brote global, resumimos el estado actual
+              del conocimiento sobre COVID-19 en México. Para hacer frente a este problema sanitario mundial, es
+              necesaria la transparencia y el intercambio de información entre naciones para evaluar las características
+              de esta nueva enfermedad. Los datos de casos confirmados y fallecimientos debido a la infección COVID-19
+              en México se obtuvieron del sitio web oficial de la Secretaría de Salud Federal (SSA) de México a través
+              de la Dirección General de Epidemiología. Estos datos son analizados por el Instituto de Diagnóstico y
+              Referencia Epidemiológica (InDRE)
+            </strong>
+          </p>
+          <h3>
+            Dengue
+          </h3>
+          <p style="text-align: justify;">
+            <strong>
+              El dengue es una de las principales enfermedades virales de carácter epidémico. Casi la mitad de la
+              población mundial se encuentra en riesgo, especialmente la que presenta mayores carencias de servicios
+              básicos en salud. En México, el dengue es una de las principales enfermedades transmitidas por vector, y
+              en los últimos diez años ha incrementado el número de casos a pesar de los esfuerzos de prevención y
+              control del vector. El virus del dengue (DENV) está conformado por cuatro serotipos (DENV-1-DENV-4), los
+              cuales circulan periódicamente en áreas tropicales endémicas e hiperendémicas. La enfermedad se
+              caracteriza por presentar un cuadro febril agudo con temperaturas que pueden ascender hasta los 40 °C,
+              acompañado de cefalea frontal, dolor retro orbital, mialgias, artralgias y exantema. Este cuadro clínico,
+              conocido como fiebre por dengue (FD), puede confundirse con la leptospirosis, fiebre amarilla e influenza,
+              entre otros.
+            </strong>
+            <strong>
+              En México, los primeros reportes de dengue se registraron en 1941, cuando se notificaron 6,955 casos en
+              toda la república. Posteriormente se reportaron pocos casos, hasta su desaparición en 1963 gracias a la
+              campaña de erradicación del Aedes que mantuvo el dengue ausente durante 12 años. Sin embargo, en 1978 se
+              reintrodujo en México, donde aumentaron los casos a partir de 1980, lo que convirtió el dengue en uno de
+              los problemas actuales más importantes de salud pública a nivel nacional
+            </strong>
+          </p>
+          <h3>
+            Sarampión
+          </h3>
+          <p style="text-align: justify;">
+            <strong>
+
+              Las primeras descripciones documentadas del sarampión en nuestro país fueron realizadas por el Dr. M
+              Rodríguez Balda en Mapimí, Durango, durante la epidemia de 1825; posteriormente durante el brote
+              registrado en el estado de Veracruz en 1927-1928, el Dr. A Hernández Mejía realizó una magistral
+              descripción de la enfermedad. En 1989-1990 se reportó en nuestro país la última epidemia de sarampión que
+              ha vivido México. En 1989 se registraron 20,381 casos con una tasa de 24.2 por 100 mil habitantes; en 1990
+              fueron 68,782 casos con una tasa de 82.5 y un total de 189 brotes que provocaron 5,899 defunciones; los
+              estados más afectados fueron Veracruz, Oaxaca, Jalisco y Sinaloa. En México, se inició la aplicación de la
+              vacuna contra sarampión tipo Schwarz en 1970 y en 1978 se cambió la cepa Schwarz por la Edmonston Zagreb,
+              y a partir de 1998 se sustituye la vacuna anti-sarampión monovalente por la vacuna tripe viral que incluye
+              además rubéola y parotiditis. En el año 2000 se inicia la aplicación de la vacuna sarampión-rubéola (SR)
+              para niños mayores de 10 años y adultos que no hayan sido vacunados, con esquema incompleto o desconocido.
+              En 2008 se realiza la campaña nacional de vacunación masiva contra el sarampión y la rubéola en la
+              población de 19 años a 29 años, para la erradicación de la rubéola y el síndrome de rubéola congénita. El
+              último caso de sarampión autóctono en nuestro país se registró en 1995.
+            </strong>
+            <strong>
+              En el periodo de 2000 a 2019 se han identificado 185 casos importados o asociados a importación. En el año
+              2019, en México hasta el día 3 de septiembre de 2019, se habían reportado 16 casos confirmados de
+              sarampión; el primer caso se reportó en el mes de febrero, posteriormente un caso en mayo, cinco casos en
+              julio y nueve para el mes de agosto. Las edades de estos casos varían de los cuatro meses de edad hasta
+              los 54 años. En el caso de los niños, todos son menores de cinco años: cuatro meses, 10 meses, 11 meses,
+              un año, dos años y cuatro años; en los adultos, la edad fluctúa de 18 a 54 años
+            </strong>
+
+          </p>
+
+
+          <h3>
+            Influenza
+          </h3>
+          <p style="text-align: justify;">
+            <strong>
+              El término pandemia de influenza se refiere a la ocurrencia masiva de casos, con una elevada tasa de
+              infección y mortalidad, ocasionada por la aparición de un nuevo subtipo de virus A, contra el cual la
+              población no tiene inmunidad natural. En general, las pandemias de influenza condicionan un incremento
+              significativo en la demanda de consultas médicas, altas tasas de hospitalización y de muerte. Tienen un
+              efecto importante en la economía y en el bienestar social como consecuencia del ausentismo laboral y de la
+              limitación del flujo de personas y de mercancías entre países y regiones, lo que puede originar una grave
+              disrupción de los servicios básicos y de salud. Desde 2003, en México se institucionalizó el concepto de
+              seguridad en salud, como uno de los componentes centrales de la seguridad nacional. A través de la
+              creación del Comité Nacional para la Seguridad en Salud (CNSS), el país cuenta con un órgano colegiado del
+              más alto nivel encabezado por la Secretaría de Salud, con la responsabilidad de analizar, definir, dar
+              seguimiento y evaluar las políticas nacionales en materia de seguridad en salud, lo que le ha conferido el
+              carácter de una política de estado.
+            </strong>
+            <strong>
+              Las acciones del CNSS se sustentan en cinco ejes fundamentales: emergencias hospitalarias, brotes de
+              enfermedades infecciosas, exposición a agentes químicos, desastres naturales y bioterrorismo. En este
+              contexto se conformó un grupo de trabajo con el objetivo de desarrollar el Plan Nacional de Preparación y
+              Respuesta ante una Pandemia de Influenza
+            </strong>
+          </p>
+
+
+        </div>
       </div>
-  
-    
-    
+    </div>
+  </div>
+
+</div>
+
+
+
 {% endblock %}
